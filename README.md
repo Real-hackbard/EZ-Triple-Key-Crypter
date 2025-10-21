@@ -18,3 +18,43 @@ A "triple key crypter" typically refers to the Triple Data Encryption Standard (
 ![EZ](https://github.com/user-attachments/assets/e993b4b3-c7cf-4142-aa23-2d6f2ff5beb3)
 
 </br>
+
+### How it works:
+* Encryption process (EDE): The algorithm applies the DES encryption process in the order of encrypt, decrypt, encrypt.
+  * Plaintext is encrypted with the first key (K1).
+  * The result is decrypted with the second key (K2).
+  * The last step is to encrypt the result with the third key (K3).
+* Key:
+  * Either two or three keys are used.
+  * When using three keys (K1,K2,K3), the effective key length is (168) bits (3 times 56) bits, since DES has a (64)-bit key, of which (56) are actually used).
+  * When using two keys (K1,K2), the process is performed as (E(K1),D(K2),E(K1).
+
+### Strengths and Weaknesses
+* Strengths:
+    * Significantly more secure than the original DES algorithm.
+    * Has long been a common standard for encrypting sensitive data.
+
+### Weaknesses:
+* Significantly slower than more modern algorithms such as AES.
+    * Has been deprecated by NIST.
+    * Current Status
+    * Due to its weaknesses and the existence of faster alternatives, 3DES is now considered deprecated and is no longer recommended for new applications.
+    * However, it remains an important part of cryptography history and is still in use in some legacy systems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
