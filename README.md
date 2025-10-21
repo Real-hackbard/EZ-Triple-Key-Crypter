@@ -11,7 +11,7 @@
 
 </br>
 
-A "triple key crypter" typically refers to the Triple Data Encryption Standard (3DES), a symmetric encryption algorithm that applies the DES algorithm three times for increased security. It uses two or three keys for the encryption-decryption-encryption (EDE) process. Although more secure than the original DES, 3DES is considered slow compared to more modern algorithms like AES.
+A "triple key crypter" typically refers to the Triple Data Encryption Standard (3DES), a [symmetric encryption algorithm](https://en.wikipedia.org/wiki/Symmetric-key_algorithm) that applies the DES algorithm three times for increased security. It uses two or three keys for the encryption-decryption-encryption (EDE) process. Although more secure than the original DES, 3DES is considered slow compared to more modern algorithms like [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
 
 </br>
 
