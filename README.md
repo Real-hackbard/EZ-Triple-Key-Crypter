@@ -41,8 +41,28 @@ A "triple key crypter" typically refers to the Triple Data Encryption Standard (
     * Due to its weaknesses and the existence of faster alternatives, 3DES is now considered deprecated and is no longer recommended for new applications.
     * However, it remains an important part of cryptography history and is still in use in some legacy systems.
 
+</br>
 
+NIST (and the current TCG specifications version 2.0 of approved algorithms for [Trusted Platform Module](https://en.wikipedia.org/wiki/Trusted_Platform_Module)) also disallows using any one of the 64 following 64-bit values in any keys (note that 32 of them are the binary complement of the 32 others; and that 32 of these keys are also the reverse permutation of bytes of the 32 others), listed here in hexadecimal (in each byte, the least significant bit is an odd-parity generated bit, which is discarded when forming the effectively 56-bit key):
 
+```
+01.01.01.01.01.01.01.01, FE.FE.FE.FE.FE.FE.FE.FE, E0.FE.FE.E0.F1.FE.FE.F1, 1F.01.01.1F.0E.01.01.0E,
+01.01.FE.FE.01.01.FE.FE, FE.FE.01.01.FE.FE.01.01, E0.FE.01.1F.F1.FE.01.0E, 1F.01.FE.E0.0E.01.FE.F1,
+01.01.E0.E0.01.01.F1.F1, FE.FE.1F.1F.FE.FE.0E.0E, E0.FE.1F.01.F1.FE.0E.01, 1F.01.E0.FE.0E.01.F1.FE,
+01.01.1F.1F.01.01.0E.0E, FE.FE.E0.E0.FE.FE.F1.F1, E0.FE.E0.FE.F1.FE.F1.FE, 1F.01.1F.01.0E.01.0E.01,
+01.FE.01.FE.01.FE.01.FE, FE.01.FE.01.FE.01.FE.01, E0.01.FE.1F.F1.01.FE.0E, 1F.FE.01.E0.0E.FE.01.F1,
+01.FE.FE.01.01.FE.FE.01, FE.01.01.FE.FE.01.01.FE, E0.01.01.E0.F1.01.01.F1, 1F.FE.FE.1F.0E.FE.FE.0E,
+01.FE.E0.1F.01.FE.F1.0E, FE.01.1F.E0.FE.01.0E.F1, E0.01.1F.FE.F1.01.0E.FE, 1F.FE.E0.01.0E.FE.F1.01,
+01.FE.1F.E0.01.FE.0E.F1, FE.01.E0.1F.FE.01.F1.0E, E0.01.E0.01.F1.01.F1.01, 1F.FE.1F.FE.0E.FE.0E.FE,
+01.E0.01.E0.01.F1.01.F1, FE.1F.FE.1F.FE.0E.FE.0E, E0.1F.FE.01.F1.0E.FE.01, 1F.E0.01.FE.0E.F1.01.FE,
+01.E0.FE.1F.01.F1.FE.0E, FE.1F.01.E0.FE.0E.01.F1, E0.1F.01.FE.F1.0E.01.FE, 1F.E0.FE.01.0E.F1.FE.01,
+01.E0.E0.01.01.F1.F1.01, FE.1F.1F.FE.FE.0E.0E.FE, E0.1F.1F.E0.F1.0E.0E.F1, 1F.E0.E0.1F.0E.F1.F1.0E,
+01.E0.1F.FE.01.F1.0E.FE, FE.1F.E0.01.FE.0E.F1.01, E0.1F.E0.1F.F1.0E.F1.0E, 1F.E0.1F.E0.0E.F1.0E.F1,
+01.1F.01.1F.01.0E.01.0E, FE.E0.FE.E0.FE.F1.FE.F1, E0.E0.FE.FE.F1.F1.FE.FE, 1F.1F.01.01.0E.0E.01.01,
+01.1F.FE.E0.01.0E.FE.F1, FE.E0.01.1F.FE.F1.01.0E, E0.E0.01.01.F1.F1.01.01, 1F.1F.FE.FE.0E.0E.FE.FE,
+01.1F.E0.FE.01.0E.F1.FE, FE.E0.1F.01.FE.F1.0E.01, E0.E0.1F.1F.F1.F1.0E.0E, 1F.1F.E0.E0.0E.0E.F1.F1,
+01.1F.1F.01.01.0E.0E.01, FE.E0.E0.FE.FE.F1.F1.FE, E0.E0.E0.E0.F1.F1.F1.F1, 1F.1F.1F.1F.0E.0E.0E.0E
+```
 
 
 
